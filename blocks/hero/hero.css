@@ -22,6 +22,10 @@ main .hero h1 {
   margin-right: auto;
 }
 
+main .hero img {
+  height: 125px;
+}
+
 main .hero picture.hero-bg {
   position: absolute;
   z-index: -1;

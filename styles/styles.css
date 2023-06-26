@@ -22,8 +22,8 @@
   --overlay-dim-background: #0008;
 
   /* fonts */
-  --body-font-family: 'Open Sans', sans-serif;
-  --heading-font-family: 'Saira Black', sans-serif;
+  --body-font-family: 'Open Sans', 'Open Sans-fallback', sans-serif;
+  --heading-font-family: 'Saira Black', 'Saira Black-fallback', sans-serif;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
@@ -42,7 +42,18 @@
 
   /* nav height */
   --nav-height: 64px;
+}
 
+@font-face {
+  font-family: 'Saira Black-fallback';
+  size-adjust: 60%;
+  src: local('Arial');
+}
+
+@font-face {
+  font-family: 'Open Sans-fallback';
+  size-adjust: 105.41%;
+  src: local('Arial');
 }
 
 @media (min-width: 900px) {
