@@ -5,10 +5,56 @@ footer {
 }
 
 footer .footer {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: auto;
+  font-size: var(--body-font-size-xxs);
+}
+
+footer .footer h3 {
+  font-size: var(--heading-font-size-xxs);
 }
 
 footer .footer p {
   margin: 0;
+}
+
+.footer .footer-brand {
+  grid-area: brand;
+}
+
+.footer .footer-brand img {
+  width: 64px;
+  height: auto;
+}
+
+.footer .footer-hours {
+  grid-area: hours;
+}
+
+.footer .footer-links {
+  grid-area: links;
+}
+
+.footer .footer-subscribe {
+  grid-area: subscribe;
+}
+
+.footer .footer-legal {
+  grid-area: legal;
+}
+
+@media (min-width: 600px) {
+  footer .footer > div {
+    display: grid;
+    gap: 16px;
+    grid-template-areas: 'brand hours' 'links subscribe' 'legal legal';
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }  
+}
+
+@media (min-width: 900px) {
+  footer .footer > div {
+    grid-template-areas: 'brand hours links subscribe' 'legal legal legal legal';
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }  
 }

@@ -123,6 +123,24 @@ export default async function decorate(block) {
       });
     }
 
+    const navTools = nav.querySelector('.nav-tools');
+    if (navTools) {
+      navTools.querySelectorAll('a').forEach((tool, i) => {
+        tool.classList.add('button');
+        if (i) tool.classList.add('secondary');
+        tool.closest('p').classList.add('button-container');
+      });
+    }
+
+    const navBrand = nav.querySelector('.nav-brand');
+    if (navBrand) {
+      const logo = navBrand.querySelector('picture');
+      const a = document.createElement('a');
+      a.href = '/';
+      a.append(logo);
+      navBrand.prepend(a);
+    }
+
     // hamburger for mobile
     const hamburger = document.createElement('div');
     hamburger.classList.add('nav-hamburger');

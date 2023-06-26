@@ -19,6 +19,12 @@ export default async function decorate(block) {
     const footer = document.createElement('div');
     footer.innerHTML = html;
 
+    const classes = ['brand', 'hours', 'links', 'subscribe', 'legal'];
+    classes.forEach((c, i) => {
+      const section = footer.children[i];
+      if (section) section.classList.add(`footer-${c}`);
+    });
+
     decorateIcons(footer);
     block.append(footer);
   }
