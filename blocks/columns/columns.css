@@ -71,3 +71,6 @@ main .section.columns-container {
   padding: 0;
 }
 
+.columns h1, .columns h2, .columns h3 {
+  text-shadow: 2px 1px #282B32;
+}

@@ -19,6 +19,7 @@ header nav {
   height: var(--nav-height);
   padding: 0 1rem;
   font-family: var(--heading-font-family);
+  letter-spacing: 0.5px;
 }
 
 header nav[aria-expanded="true"] {
@@ -227,7 +228,8 @@ header nav .nav-sections ul > li > ul > li {
     display: flex;
     gap: 2em;
     margin: 0;
-    font-size: var(--body-font-size-xs);
+    font-size: var(--body-font-size-s);
+    justify-content: end;
   }
 
   header nav .nav-sections > ul > li {
